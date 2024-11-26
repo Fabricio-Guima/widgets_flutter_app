@@ -21,6 +21,7 @@ Switches, Checkboxes e Radios configurados para diferentes estados.
 Listagem e Layouts:
 Tiles e listas dinâmicas.
 Navegação deslizável com PageView.
+
 🛠 Tecnologias e Bibliotecas
 Flutter 3: Framework principal.
 go_router: Navegação e rotas.
