@@ -180,43 +180,47 @@ class _CardType4 extends StatelessWidget {
     return Card(
       clipBehavior: Clip.hardEdge,
       elevation: elevation,
-      child: Stack(
-        children: [
-          // Imagem ocupa toda a largura e altura do card
-          Positioned.fill(
-            child: Image.network(
-              'https://picsum.photos/id/${elevation.toInt()}/600/250',
-              fit: BoxFit.cover, // Preenche todo o espaço disponível
+      child: SizedBox(
+        height: 250, // Altura fixa
+        child: Stack(
+          children: [
+            // Imagem ocupa toda a largura e altura do card
+            Positioned.fill(
+              child: Image.network(
+                'https://picsum.photos/id/${elevation.toInt()}/600/250',
+                fit: BoxFit.cover, // Preenche todo o espaço disponível
+              ),
             ),
-          ),
-          // Botão no canto superior direito
-          Positioned(
-            top: 0,
-            right: 0,
-            child: GestureDetector(
-              onTap: () {
-                // Ação ao clicar no botão
-              },
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
+            // Botão no canto superior direito
+            Positioned(
+              top: 0,
+              right: 0,
+              child: GestureDetector(
+                onTap: () {
+                  // Ação ao clicar no botão
+                },
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                    ),
                   ),
-                ),
-                padding: const EdgeInsets.all(
-                    8), // Controle do espaço ao redor do ícone
-                child: const Icon(
-                  Icons.more_vert_outlined,
-                  size: 24, // Controle do tamanho do ícone
+                  padding: const EdgeInsets.all(
+                      8), // Controle do espaço ao redor do ícone
+                  child: const Icon(
+                    Icons.more_vert_outlined,
+                    size: 24, // Controle do tamanho do ícone
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
+
 
 
