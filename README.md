@@ -16,6 +16,10 @@ Este repositório apresenta um projeto Flutter desenvolvido na **versão 3**, de
 - **Assets e Imagens Dinâmicas**:
   - Uso de imagens locais em cards.
   - Carregamento de imagens aleatórias com [Picsum](https://picsum.photos/) usando o widget `NetworkImage`.
+- **Gerenciamento de Temas com Riverpod**:
+  - **Modo Escuro/Claro**: Controle do estado de ativação do tema escuro usando `isDarkModeProvider`.
+  - **Personalização de Cores (AppTheme)**: Alteração dinâmica de cores dos widgets, textos e ícones.
+    - Para manipular o estado do tema do aplicativo, foi utilizada a técnica de **cópia imutável**, implementada através do método `copyWith()`.
 
 ### Indicadores de Progresso
 
@@ -44,6 +48,7 @@ Este repositório apresenta um projeto Flutter desenvolvido na **versão 3**, de
 - **`StreamBuilder`**: Gerenciamento de estados e carregamento assíncrono.
 - **`Future`**: Simulação de tarefas assíncronas para carregamentos e interações.
 - **`NetworkImage`**: Carregamento de imagens dinâmicas.
+- **Riverpod**: Gerenciamento de estados reativo e eficiente.
 
 ---
 
@@ -59,3 +64,20 @@ O projeto adota uma abordagem de arquitetura modular para garantir:
 - **Manutenibilidade**: Código limpo e modular, permitindo alterações e atualizações de forma ágil.
 
 ---
+
+## 🎨 **Gerenciamento de Estados com Riverpod**
+
+O projeto utiliza o **Riverpod** para um gerenciamento de estado eficaz e escalável, especialmente para controle de temas:
+
+1. **Estado de Modo Escuro/Claro (`isDarkModeProvider`)**:
+
+   - Permite alternar entre o tema escuro e o tema claro dinamicamente.
+
+2. **Estado do Tema do Aplicativo (`appThemeProvider`)**:
+   - Permite personalizar as cores dos widgets, textos e ícones.
+   - Para manipular o estado, foi utilizado o método **`copyWith()`**, permitindo criar cópias imutáveis do tema atual e atualizar propriedades específicas de forma eficiente e segura.
+
+```dart
+
+---
+```
