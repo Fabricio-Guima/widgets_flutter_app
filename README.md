@@ -76,8 +76,3 @@ O projeto utiliza o **Riverpod** para um gerenciamento de estado eficaz e escal�
 2. **Estado do Tema do Aplicativo (`appThemeProvider`)**:
    - Permite personalizar as cores dos widgets, textos e ícones.
    - Para manipular o estado, foi utilizado o método **`copyWith()`**, permitindo criar cópias imutáveis do tema atual e atualizar propriedades específicas de forma eficiente e segura.
-
-```dart
-
----
-```
